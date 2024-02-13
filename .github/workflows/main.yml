@@ -32,13 +32,13 @@ jobs:
 
      - name: Prettify code
 
-       uses: Mr-Coxall/prettier_action@main
+       uses: creyD/prettier_action@v4.2
 
        with:
 
          # run Prettier and change code that needs fixing, before next section
 
-         prettier_options: --write src//**/*.{html,css,js,ts,jsx,tsx,json}
+         prettier_options: --write **/*.{js,md}
 
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
