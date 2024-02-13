@@ -38,7 +38,7 @@ jobs:
 
          # run Prettier and change code that needs fixing, before next section
 
-         prettier_options: --write **/*.{html,css,js,ts,jsx,tsx,json}
+         prettier_options: --write src//**/*.{html,css,js,ts,jsx,tsx,json}
 
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
