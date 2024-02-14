@@ -6,7 +6,7 @@
 
 ---
 
-name: Mr Coxall's Super Linter
+name: Super Linter
 
 
 on: [push, pull_request]
@@ -26,15 +26,6 @@ jobs:
      - name: Check out Git repository
 
        uses: actions/checkout@main
-     - name: Prettier Action
-       uses: creyD/prettier_action@v4.3
-       with:
-         prettier_options: --write **/*.{js,html,css}
-         
-         github_token: ${{ github.token }}
-          # Remove the node_modules folder before committing changes
-         clean_node_folder: true
-          
           
      - name: Run GitHub Super Linter
 
