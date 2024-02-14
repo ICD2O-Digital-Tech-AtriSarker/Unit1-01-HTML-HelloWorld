@@ -26,7 +26,12 @@ jobs:
      - name: Check out Git repository
 
        uses: actions/checkout@main
-
+     - name: Prettier, please!
+       uses: reiddraper/prettier-please@v0.0.1
+       with:
+       # GitHub token
+           github-token: ${{ secrets.GITHUB_TOKEN }}
+          
      - name: Run GitHub Super Linter
 
        uses: github/super-linter@main
