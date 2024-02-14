@@ -26,11 +26,15 @@ jobs:
      - name: Check out Git repository
 
        uses: actions/checkout@main
-     - name: Prettier, please!
-       uses: reiddraper/prettier-please@v0.0.1
+     - name: Prettier Action
+       uses: creyD/prettier_action@v4.3
        with:
-       # GitHub token
-           github-token: ${{ secrets.GITHUB_TOKEN }}
+         prettier_options: --write **/*.{js,html,css}
+         
+         github_token: ${{ github.token }}
+          # Remove the node_modules folder before committing changes
+         clean_node_folder: true
+          
           
      - name: Run GitHub Super Linter
 
